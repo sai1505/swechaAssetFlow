@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
+import 'config/firebase_config.dart';
 import 'constants/app_constants.dart';
 import 'screens/welcome_screen.dart';
 
-void main() {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  await dotenv.load(fileName: ".env");
+  await FirebaseConfig.initialize();
 
   // Set system UI overlay style
   SystemChrome.setSystemUIOverlayStyle(

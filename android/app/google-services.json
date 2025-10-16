@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "564350309447",
+    "project_id": "assetflow-2643a",
+    "storage_bucket": "assetflow-2643a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:564350309447:android:eba6984d15a82566ec8d62",
+        "android_client_info": {
+          "package_name": "com.example.swechaassetflow"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMMrVt6s1ZmEnAAXwD_dGu2qjOzPQWvp4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

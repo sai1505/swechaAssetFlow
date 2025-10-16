@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:swechaassetflow/screens/signup_screen.dart';
 
 import '../constants/app_constants.dart';
+import '../utils/page_transitions.dart';
 import '../widgets/svg_illustrations.dart';
+import 'login_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -71,7 +74,10 @@ class WelcomeScreen extends StatelessWidget {
                   height: 56,
                   child: ElevatedButton(
                     onPressed: () {
-                      // Navigate to login
+                      Navigator.push(
+                        context,
+                        SlideRightRoute(page: const LoginScreen()),
+                      );
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: AppConstants.primaryBlack,
@@ -102,7 +108,10 @@ class WelcomeScreen extends StatelessWidget {
                   height: 56,
                   child: OutlinedButton(
                     onPressed: () {
-                      // Navigate to signup
+                      Navigator.push(
+                        context,
+                        SlideRightRoute(page: const SignUpScreen()),
+                      );
                     },
                     style: OutlinedButton.styleFrom(
                       foregroundColor: AppConstants.primaryBlack,
