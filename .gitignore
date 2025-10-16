@@ -51,3 +51,10 @@ google-services.json
 # Firebase config
 lib/firebase_options.dart
 
+# Flutter/Dart
+.packages
+build/
+android/app/build/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+
