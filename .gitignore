@@ -58,3 +58,9 @@ android/app/build/
 ios/Flutter/Flutter.framework
 ios/Flutter/Flutter.podspec
 
+ios/Pods/
+ios/build/
+android/.gradle/
+android/local.properties
+
+
