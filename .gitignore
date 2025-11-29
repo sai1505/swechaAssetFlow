@@ -1,0 +1,78 @@
+# ========================================
+# General
+# ========================================
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# ========================================
+# IntelliJ / Android Studio
+# ========================================
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# ========================================
+# VS Code (uncomment if you want to ignore)
+# ========================================
+#.vscode/
+
+# ========================================
+# Flutter / Dart
+# ========================================
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+coverage/
+generated_plugin_registrant.dart
+
+# API Docs
+doc/api/
+
+# Symbolication / Obfuscation
+app.*.symbols
+app.*.map.json
+
+# ========================================
+# iOS
+# ========================================
+**/ios/Flutter/.last_build_id
+**/ios/Flutter/App.framework
+**/ios/Flutter/Flutter.framework
+**/ios/ServiceDefinitions.json
+**/ios/Runner/GeneratedPluginRegistrant.*
+
+# CocoaPods
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/ephemeral/
+
+# ========================================
+# Android
+# ========================================
+**/android/.gradle/
+**/android/captures/
+**/android/local.properties
+**/android/out/
+
+# Android Studio build directories
+android/app/debug/
+android/app/profile/
+android/app/release/
+
+.env
+*.env

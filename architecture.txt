@@ -1,0 +1,36 @@
+lib/
+  main.dart
+
+  core/
+    utils/
+    constants/
+    errors/
+    network/
+
+  features/
+    swecha_asset_flow/
+      data/
+        models/
+          asset_model.dart
+          asset_category_model.dart
+        datasources/
+          asset_remote_data_source.dart   // If using API
+          asset_local_data_source.dart    // If using local DB like Hive/SQLite
+        repositories/
+          asset_repository.dart
+          asset_repository_impl.dart
+
+      bloc/
+        asset_bloc.dart
+        asset_event.dart
+        asset_state.dart
+
+      presentation/
+        pages/
+          asset_list_page.dart
+          asset_details_page.dart
+          add_or_edit_asset_page.dart
+        widgets/
+          asset_card.dart
+          asset_form.dart
+          asset_search_field.dart
