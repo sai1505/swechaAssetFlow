@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:swecha_asset_flow/screens/Auth/signup_page.dart';
+import 'package:swecha_asset_flow/widgets/animations/slide_page_route.dart';
 import 'package:swecha_asset_flow/widgets/buttons/HapticButton.dart';
 
 class WelcomeScreenSlides extends StatelessWidget {
@@ -7,6 +9,7 @@ class WelcomeScreenSlides extends StatelessWidget {
   final String text;
   final String buttonText;
   final VoidCallback onPressed;
+  final bool showSkip;
 
   const WelcomeScreenSlides({
     super.key,
@@ -14,6 +17,7 @@ class WelcomeScreenSlides extends StatelessWidget {
     required this.text,
     required this.onPressed,
     this.buttonText = "Next",
+    this.showSkip = true,
   });
 
   @override
@@ -70,6 +74,19 @@ class WelcomeScreenSlides extends StatelessWidget {
                   text: buttonText,
                   onPressed: onPressed,
                 ),
+                if (showSkip)
+                  HapticButton(
+                    text: "Skip",
+                    textColor: Colors.grey,
+                    textDecoration: TextDecoration.underline,
+                    color: Colors.transparent,
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        SlidePageRoute(page: SignupPage()),
+                      );
+                    },
+                  ),
               ],
             ),
           ),

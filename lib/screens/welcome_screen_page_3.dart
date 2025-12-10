@@ -17,6 +17,7 @@ class WelcomeScreenPage3 extends StatelessWidget {
               text:
                   "No worries — we’ve got you covered. Meet Swecha Asset Flow",
               buttonText: "Sign Up / Sign In",
+              showSkip: false,
               onPressed: () {
                 Navigator.push(
                   context,
