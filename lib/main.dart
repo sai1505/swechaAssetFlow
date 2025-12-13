@@ -1,7 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:swecha_asset_flow/Blocs/Auth/bloc/auth_bloc.dart';
+import 'package:swecha_asset_flow/Repositories/auth_repository.dart';
 import 'package:swecha_asset_flow/screens/welcome_screen_page.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await dotenv.load(fileName: ".env");
+  await Supabase.initialize(
+    url: dotenv.env['SUPABASE_URL'].toString(),
+    anonKey: dotenv.env['SUPABASE_API_KEY'].toString(),
+  );
   runApp(MyApp());
 }
 
@@ -10,12 +21,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'SwechaAssetFlow',
-      debugShowCheckedModeBanner: false,
-      home: const WelcomeScreenPage(),
-      themeMode: ThemeMode.system,
-      theme: _lightTheme,
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (_) => AuthBloc(AuthRepository()),
+        ),
+      ],
+      child: MaterialApp(
+        title: 'SwechaAssetFlow',
+        debugShowCheckedModeBanner: false,
+        home: const WelcomeScreenPage(),
+        themeMode: ThemeMode.system,
+        theme: _lightTheme,
+      ),
     );
   }
 
